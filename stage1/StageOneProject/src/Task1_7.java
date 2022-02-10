@@ -19,7 +19,7 @@ public class Task1_7 implements ITask{
         int last = number % 10;
         if(last == 1)
             result +="бутылка стояла";
-        else if(last == 0 || last != 0 && last <= 4)
+        else if(last != 0 && last <= 4)
             result+="бутылки стояли";
         else
             result+="бутылок стояло";
