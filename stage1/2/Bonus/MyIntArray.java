@@ -52,6 +52,7 @@ public class MyIntArray {
         if(index>=used || index < 0)
             throw new ArrayIndexOutOfBoundsException();
         System.arraycopy(array,index+1,array,index,used-index);
+        used--;
     }
 
     @Override
