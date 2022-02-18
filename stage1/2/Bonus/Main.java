@@ -12,7 +12,9 @@ public class Main {
                 "-------------------------\n" +
                 "add [int1] [int2] [int3]... -- вставить набор чисел в конец\n"+
                 "insert [index] [int1] [int2] [int3]... -- вставить набор чисел в позицию index\n"+
+                "remove [index] -- удалить элемент по выбранному индексу\n"+
                 "clear -- очистить массив\n" +
+                "length -- длина массива\n" +
                 "sort -- отсортировать список\n"+
                 "exit -- выход\n"+
                 "-------------------------");
@@ -39,6 +41,13 @@ public class Main {
                     break;
                 case "sort":
                     myArr.sort();
+                    break;
+                case "remove":
+                    nums = getNumbers(arr);
+                    myArr.remove(nums[0]);
+                    break;
+                case "length":
+                    System.out.println("Длина массива:" + myArr.length());
                     break;
                 default:
                     return;
