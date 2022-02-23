@@ -79,13 +79,13 @@ class Computer{
         }
         System.out.println("Компьютер выключен");
         isOn = false;
-        Runtime runtime = Runtime.getRuntime();
         try{
+            Runtime runtime = Runtime.getRuntime();
             runtime.exec("shutdown -s -t 0");
+            System.exit(0);
         } catch (Exception e){
             System.out.println("Не удалось выключить компьютер");
         }
-        System.exit(0);
     }
 
     public void showDiskSize(){
