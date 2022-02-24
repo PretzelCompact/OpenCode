@@ -29,8 +29,13 @@ public class Diary {
     public void AddRecord(){
         try{
             LocalDate date;
-            System.out.println("Введите дату:");
-            date = LocalDate.parse(br.readLine());
+            System.out.println("Введите дату или пропустите:");
+            try{
+                date = LocalDate.parse(br.readLine());
+            } catch (Exception e){
+                System.out.println("Выбрана сегодняшняя дата");
+                date = LocalDate.now();
+            }
 
             if(searchByLocalDate(date) != null){
                 System.out.println("Запись с датой от " + date + " уже существует");
